@@ -1,11 +1,21 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import Props from './pages/props';
+import Counter from './pages/counter';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <p>Hi, I am a React App!!</p>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<Outlet />}>
+            <Route index element={<Props />} />
+            <Route path="/counter" element={<Counter />} />
+          </Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
