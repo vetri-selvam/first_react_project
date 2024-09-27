@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
-import {useState, useEffect} from 'react';
-
+import {useState} from 'react';
+import {useEffect} from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(100);
