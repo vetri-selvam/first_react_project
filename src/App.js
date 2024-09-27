@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import Props from './pages/props';
-import Counter from './pages/counter';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
@@ -9,8 +8,8 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route index element={<Props />} />
-            <Route path="/counter" element={<Counter />} />
+            <Route index element={<HomePage />} />
+            {/* <Route path="/counter" element={<Counter />} /> */}
           </Route>
         </Routes>
       </div>
